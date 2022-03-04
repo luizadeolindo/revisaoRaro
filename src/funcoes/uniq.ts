@@ -7,6 +7,7 @@
  * 
  * @returns somente os itens definidos.
  */
-export const uniq = <T>(args: T[]): T[] => {
-  return null;
+ export const uniq = <T>(args: T[]): T[] => {
+  let newArr = args.filter((element, indexx) => args.indexOf(element) === indexx)
+  return newArr
 };
