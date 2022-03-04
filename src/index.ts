@@ -57,7 +57,7 @@ function testFromPairs() {
   };
 
   // chamada ao método.
-  const resultado = fromPairs(items);
+  const resultado = fromPairs(...items);
 
   // verificação do método.
   const correto = Object.keys(esperado).every(key => esperado[key] === resultado[key]);

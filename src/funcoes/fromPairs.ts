@@ -8,6 +8,10 @@ import { KeyAndValue } from "../../types/keyAndValue";
  * @param args 
  * @returns 
  */
-export const fromPairs = (args: KeyAndValue[]): Record<string, unknown> => {
-  return null;
+ export const fromPairs = (...args: KeyAndValue[]): Record<string, unknown> => {
+  let resultado: Record<string, unknown> = {}
+  args.map(arr => {
+     resultado[arr[0]] = arr[1]
+  })
+  return resultado
 };
