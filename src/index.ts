@@ -57,7 +57,7 @@ function testFromPairs() {
   };
 
   // chamada ao método.
-  const resultado = fromPairs(items);
+  const resultado = fromPairs(...items);
 
   // verificação do método.
   const correto = Object.keys(esperado).every(key => esperado[key] === resultado[key]);
@@ -97,7 +97,7 @@ async function testFila() {
     await escreveNaFila(mensagem);
   }
 
-  const mensagensEscritas = await leArquivo(() => {});
+  const mensagensEscritas = await leArquivo();
   const todasMensagensEscritas = mensagensEscritas
     .split('\n')
     .every((mensagem, index) => mensagem === mensagens[index]);
